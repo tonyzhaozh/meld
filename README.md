@@ -32,13 +32,15 @@ export LD_LIBRARY_PATH=~/.mujoco/mujoco200/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.0/lib64:/usr/lib/x86_64-linux-gnu:/usr/local/lib:/usr/lib64:/usr/lib/nvidia-418
 ```
 
-- Clone this repo
 - Install all requirements for this repo into a conda env
 ```bash
 cd <path_to_meld>/docker
 conda env create -f environment.yml
 source activate meld
+```
 
+- Clone this repo and then clone the agents repo which is a modified version of tf-agents
+```
 cd <path_to_meld>
 git clone https://github.com/tonyzhaozh/agents.git
 cd agents
