@@ -53,6 +53,7 @@ export LD_PRELOAD=''
 ```
 
 #### Docker
+- Follow the directions above to clone the agents repo but no need to pip install it
 - Place your `mjkey.txt` into `<path_to_meld>/docker`
 - From `<path_to_meld>/docker` directory, run this command to build the Docker image from the Dockerfile:
 ```docker build . -t meld```
@@ -72,7 +73,7 @@ CUDA_VISIBLE_DEVICES=0 python meld/scripts/run_meld.py \
   --gin_file meld/configs/1_cheetahVel.gin \
   --gin_file meld/configs/2_cheetahVel_1episode.gin
 
- 
+
 ```
 
 To view training and evaluation information (e.g. learning curves, GIFs of rollouts and predictions), run
