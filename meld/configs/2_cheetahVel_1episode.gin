@@ -1,0 +1,75 @@
+
+train_eval.max_episode_len_override=50
+ModelDistributionNetwork.elbo_reward_weight=16
+ModelDistributionNetwork.latent1_size=64
+ModelDistributionNetwork.latent2_size=32
+ModelDistributionNetwork.reward_stddev=0.2
+ModelDistributionNetwork.base_depth=64
+train_eval.stop_model_training=500000
+
+# ==============================================================================
+# Tasks and eval
+# ==============================================================================
+
+train_eval.episodes_per_trial=1
+train_eval.num_train_tasks=20
+train_eval.num_eval_tasks=10
+
+train_eval.eval_interval=100
+train_eval.num_eval_trials=10
+train_eval.eval_on_holdout_tasks = True
+
+# ==============================================================================
+# Initial collection + training
+# ==============================================================================
+
+train_eval.init_collect_trials_per_task=20
+
+train_eval.init_model_train_ratio=0.3
+
+# ==============================================================================
+# Data collection
+# ==============================================================================
+
+train_eval.replay_buffer_capacity=10000
+train_eval.num_tasks_to_collect_per_iter=1
+train_eval.collect_trials_per_task=1
+
+# ==============================================================================
+# Sample data for training
+# ==============================================================================
+
+train_eval.num_tasks_per_train=10
+train_eval.train_trials_per_task=1
+
+train_eval.model_bs_in_steps=256
+train_eval.ac_bs_in_steps=256
+
+# ==============================================================================
+# Training
+# ==============================================================================
+
+train_eval.model_train_ratio=0.8
+train_eval.ac_train_ratio=0.8
+
+train_eval.model_train_freq=1
+train_eval.ac_train_freq=1
+
+# ==============================================================================
+# General
+# ==============================================================================
+
+train_eval.num_iterations=10000000
+train_eval.seed=0
+train_eval.gpu_allow_growth=False
+train_eval.verbose=True
+
+# ==============================================================================
+# Summaries and logging:
+# ==============================================================================
+
+train_eval.policy_checkpoint_freq_in_iter=1000
+train_eval.logging_freq_in_iter=10
+train_eval.summary_freq_in_iter=200
+
+train_eval.num_images_per_summary=2

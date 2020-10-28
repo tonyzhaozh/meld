@@ -1,0 +1,44 @@
+<mujoco>
+
+    <compiler meshdir="meshes" texturedir="textures"/>
+    <include file="include/assets.xml"/>
+    <include file="include/actuators.xml"/>
+    <option timestep='0.0025'/>
+
+    <worldbody>
+
+        <!-- cameras track was -1 0 1.4(single), -1.5 0 2(double) -->
+        <camera name="track" pos="-0.7 0 1.7" mode="fixed" euler="0.65 -0 -1.571"/>
+
+
+<!--         <camera name="track" pos="1.5 1 1" mode="fixed" euler="1 0 2.2"/>
+ -->
+	    <camera name="track_aux_reach" pos="0.5 -2.4 0.4" mode="fixed" euler="1.5 0 0"/>
+
+        <camera name="track_front" pos="0.55 0 1.2" />
+        <camera name="track_high" pos="0.5 -0.5 1" mode="fixed" euler="0.4 0 0"/>
+        <camera name="topview" pos="0 0 3.2" />
+
+        <!-- lighting of the scene -->
+        <light diffuse=".8 .8 .8" dir="0 -.15 -1" directional="false" pos="1 1 4.0" specular="0.3 0.3 0.3" castshadow="false"/>
+
+        <!-- robot -->
+        <body name="sawyer">
+            <include file="include/sawyer_chain.xml"/>
+        </body>
+
+        <!-- reasonable range x: [0.7, 0.9]  y:[-0.3, 0.3]  z: [0.2, 0.8]
+    Box(low=np.array([0.75, -0.3, 0.3]), high=np.array([0.9, 0.3, 0.7]))-->
+        <site name="goal_reach_site" pos="0.9 0.3 0.7" size="0.01" rgba="1 0 0 1"/>
+<!--         <geom rgba="0.3 0.3 1 0.5" contype="1" size="0.02" name="0.1ball" conaffinity="1" pos="0.8 0.5 0.55"/>
+        <geom rgba="0.3 0.3 1 0.5" contype="1" size="0.06" name="0.3ball" conaffinity="1" pos="0.8 0.4 0.55"/>
+        <geom rgba="1 0.3 0.3 0.4" type="box" contype="1" size="0.075 0.3 0.2" name="box_right" conaffinity="1" pos="0.825 0 0.5" mass="1000"/> -->
+
+    </worldbody>
+
+    <!-- define a good reset position in joint angles -->
+    <keyframe>
+        <key qpos='-6.31404e-06 -0.804997 1.69653e-06 1.44001 -0.173999 -0.232001 -2.8487e-07'/>
+    </keyframe>
+
+</mujoco>

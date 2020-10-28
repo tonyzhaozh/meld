@@ -1,0 +1,29 @@
+
+# ==============================================================================
+# Parameters for train_eval:
+# ==============================================================================
+
+train_eval.env_name = 'SawyerButtons-v0'
+train_eval.action_repeat = 1
+train_eval.action_mode = 'joint_delta_position'
+
+# ==============================================================================
+# Dimensions for networks:
+# ==============================================================================
+
+train_eval.actor_fc_layers=(512, 512)
+train_eval.critic_obs_fc_layers=None
+train_eval.critic_action_fc_layers=None
+train_eval.critic_joint_fc_layers=(512, 512)
+train_eval.num_repeat_when_concatenate = 32
+
+# ==============================================================================
+# Rendering:
+# ==============================================================================
+
+RenderGymWrapper.goal_visibile_only_in_videos = True
+
+train_eval.double_camera = True
+PixelObservationsGymWrapper.auxCamSettings = {'width': 64, 'height': 64, 'depth': False, 
+											'camera_name': 'track_aux_insert', 
+											}

@@ -1,0 +1,33 @@
+
+# ==============================================================================
+# Inputs to networks
+# ==============================================================================
+
+train_eval.critic_input='latentDistribution'
+train_eval.actor_input='latentDistribution'
+ModelDistributionNetwork.model_input = 'image'
+
+# ==============================================================================
+# Parameters for model
+# ==============================================================================
+
+# general
+ModelDistributionNetwork.name = 'ModelDistributionNetwork'
+ModelDistributionNetwork.base_depth = 32
+ModelDistributionNetwork.kl_analytic = True
+ModelDistributionNetwork.model_reward = True
+
+# latent dims
+ModelDistributionNetwork.latent1_size = 32
+ModelDistributionNetwork.latent2_size = 256
+
+# dense vs sparse rewards
+ModelDistributionNetwork.sparse_reward_inputs = True
+ModelDistributionNetwork.sparse_reward_targets = False
+
+# ==============================================================================
+# Stop AC gradients from going through model
+# ==============================================================================
+
+MeldAgent.actor_input_stop_gradient = True
+MeldAgent.critic_input_stop_gradient = True

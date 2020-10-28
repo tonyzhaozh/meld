@@ -1,0 +1,8 @@
+<mujoco model="table">
+
+    <!-- table top -->
+    <body name="table_full" pos="0 0 0" quat="0 0 0 0">
+    	<geom name="table_top_geom" type="plane" pos="0.6 0 0" size="0.4 0.4 0.5" rgba=".6 .6 .5 1" contype="1" conaffinity="1" friction="2 0.1 0.002" material="light_wood_v3"/>
+    </body>
+
+</mujoco>

@@ -1,0 +1,23 @@
+
+# ==============================================================================
+# Parameters for train_eval:
+# ==============================================================================
+
+train_eval.env_name = 'HalfCheetahVel-v0'
+train_eval.action_repeat = 1
+
+# ==============================================================================
+# Dimensions for networks:
+# ==============================================================================
+
+train_eval.actor_fc_layers=(256, 256)
+train_eval.critic_obs_fc_layers=None
+train_eval.critic_action_fc_layers=None
+train_eval.critic_joint_fc_layers=(256, 256)
+train_eval.num_repeat_when_concatenate = 32
+
+# ==============================================================================
+# Rendering:
+# ==============================================================================
+
+train_eval.double_camera = False

@@ -1,0 +1,16 @@
+<mujoco model="peg_box">
+
+    <!-- box where the peg should be inserted -->
+    <body name="box1" pos="0.445 0.075 0.0" quat="0 0 0 0">
+
+      <!-- make the box really heavy to mimic being clamped to the table -->
+      <geom rgba="0.3 0.3 1 1" type="box" contype="1" size="0.02 0.025 0.03" name="box_bottom1" conaffinity="1" pos="0 -.045 .03" mass="1000"/>
+      <geom rgba="0.3 0.3 1 1" type="box" contype="1" size="0.02 0.025 0.03" name="box_top1" conaffinity="1" pos="0 .045 0.03" mass="1000"/>
+      <geom rgba="0.3 0.3 1 1" type="box" contype="1" size="0.025 0.07 0.03" name="box_left1" conaffinity="1" pos=".045 0 0.03" mass="1000"/>
+      <geom rgba="0.3 0.3 1 1" type="box" contype="1" size="0.025 0.07 0.03" name="box_right1" conaffinity="1" pos="-0.045 0 0.03" mass="1000"/>
+
+      <!-- site where peg should try to get to-->
+      <site name="goal_insert_site1" pos="0 0 0" size="0.02" rgba="1 0 0 0"/>
+    </body>
+
+</mujoco>

@@ -1,0 +1,32 @@
+name: meld
+channels:
+- defaults
+dependencies:
+- python==3.6.7
+- pip==19.3.1
+- pip:
+  - absl-py==0.8.1
+  - matplotlib
+  - ipython==7.9.0
+  - gast==0.2.2
+  - glfw==1.8.4
+  - gym==0.12.1
+  - gin-config==0.1.3
+  - mujoco-py==2.0.2.5
+  - numpy==1.17.4
+  - scipy==1.3.2
+  - tb-nightly==1.15.0a20190911
+  - termcolor==1.1.0
+  # - tf-agents-nightly==0.2.0.dev20191111 # replace with local version
+  - tf-estimator-nightly==1.14.0.dev2019091001
+  - tensorflow-gpu==1.15.0 #NOTE you need cuda10
+  - tensorflow-probability==0.8
+  - tfp-nightly==0.9.0.dev20190910
+  - PyOpenGL==3.1.0
+  # new for hardware envs from sawyer_control
+  - pyquaternion
+  - pyyaml
+  - rospkg
+  # - ffmpeg
+  - moviepy
+  - tensorboardX

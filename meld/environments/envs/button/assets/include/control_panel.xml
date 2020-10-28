@@ -1,0 +1,48 @@
+<mujoco model="controlpanel">
+
+	<body name="panel" pos="0 0 0" quat="0 0 0 0">
+
+		<!-- panel box -->
+		<geom type="box" contype="1" size="0.08 0.2 0.05" conaffinity="1" pos="0 0 0.05" mass="1000" rgba="0.2 0.2 0.2 1"/>
+
+		<!-- ###################################### -->
+
+	    <!-- box where the peg should be inserted -->
+	    <body name="button1" pos="0.0 0.14 0.1" quat="0 0 0 0">
+
+	      <!-- make the button really heavy to mimic being clamped to the table -->
+	      <geom type="cylinder" contype="1" size="0.04  0.005" conaffinity="1" pos="0 0 0" mass="1000" material="metal"/>
+	      <geom type="cylinder" contype="1" size="0.025 0.005" conaffinity="1" pos="0 0 0.01" mass="1000" rgba="1 0 0 1.0"/>
+	      <!-- 0.7 0.2 0.2 1.0 -->
+
+	      <!-- site where peg should try to get to-->
+	      <site name="goal_insert_site1" pos="0 0 0.02" size="0.01" rgba="1 0 0 0.0"/>
+	    </body>
+
+	    <!-- box where the peg should be inserted -->
+	    <body name="button2" pos="0.0 0.0 0.1" quat="0 0 0 0">
+
+	      <!-- make the button really heavy to mimic being clamped to the table -->
+	      <geom type="cylinder" contype="1" size="0.04  0.005" conaffinity="1" pos="0 0 0" mass="1000" material="metal"/>
+	      <geom type="cylinder" contype="1" size="0.025 0.005" conaffinity="1" pos="0 0 0.01" mass="1000" rgba="0 1 0 1.0"/>
+
+	      <!-- site where peg should try to get to-->
+	      <site name="goal_insert_site2" pos="0 0 0.02" size="0.01" rgba="1 0 0 0.0"/>
+	    </body>
+
+	    <!-- box where the peg should be inserted -->
+	    <body name="button3" pos="0.0 -0.14 0.1" quat="0 0 0 0">
+
+	      <!-- make the button really heavy to mimic being clamped to the table -->
+	      <geom type="cylinder" contype="1" size="0.04  0.005" conaffinity="1" pos="0 0 0" mass="1000" material="metal"/>
+	      <geom type="cylinder" contype="1" size="0.025 0.005" conaffinity="1" pos="0 0 0.01" mass="1000" rgba="0 0 1 1.0"/>
+
+	      <!-- site where peg should try to get to-->
+	      <site name="goal_insert_site3" pos="0 0 0.02" size="0.01" rgba="1 0 0 0.0"/>
+	    </body>
+
+
+	    <!-- ###################################### -->
+	</body>
+
+</mujoco>
