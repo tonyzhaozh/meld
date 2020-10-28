@@ -1,0 +1,53 @@
+### Below are commands for reproducing MELD results presented in the paper
+
+### cheetahVel
+CUDA_VISIBLE_DEVICES=0 python meld/scripts/run_meld.py \
+  --root_dir save_dir \
+  --experiment_name dense_cheetah \
+  --gin_file meld/configs/0_meld_dense.gin \
+  --gin_file meld/configs/1_cheetahVel.gin \
+  --gin_file meld/configs/2_cheetahVel_1episode.gin
+
+
+### Sawyer Reacher
+CUDA_VISIBLE_DEVICES=0 python meld/scripts/run_meld.py \
+  --root_dir save_dir \
+  --experiment_name dense_sawyerReacher \
+  --gin_file meld/configs/0_meld_dense.gin \
+  --gin_file meld/configs/1_sawyerReacher.gin \
+  --gin_file meld/configs/2_sawyerReacher_1episode.gin
+
+
+### Sawyer Shelf
+CUDA_VISIBLE_DEVICES=0 python meld/scripts/run_meld.py \
+  --root_dir save_dir \
+  --experiment_name dense_sawyerShelf \
+  --gin_file meld/configs/0_meld_dense.gin \
+  --gin_file meld/configs/1_sawyerShelf.gin \
+  --gin_file meld/configs/2_sawyerShelf_1episode.gin
+
+
+### Sawyer Button
+CUDA_VISIBLE_DEVICES=0 python meld/scripts/run_meld.py \
+  --root_dir save_dir \
+  --experiment_name dense_sawyerButtons \
+  --gin_file meld/configs/0_meld_dense.gin \
+  --gin_file meld/configs/1_sawyerButtons.gin \
+  --gin_file meld/configs/2_sawyerButtons_1episode.gin \
+  --gin_param train_eval.rb_checkpoint_freq_in_iter=300
+
+### Sawyer Button, sparse reward test-time
+# Please first run the dense reward experiment above till converged (~200k global steps / ~100k env steps)
+# then replace <DIR_TO_REPLAY_BUFFER> below with the saved replay_buffers directory
+CUDA_VISIBLE_DEVICES=0 python meld/scripts/run_meld.py \
+  --root_dir save_dir \
+  --experiment_name sparse_sawyerButtons \
+  --gin_file meld/configs/0_meld_sparse.gin \
+  --gin_file meld/configs/1_sawyerButtons.gin \
+  --gin_file meld/configs/2_sawyerButtons_2episodes_sparse.gin \
+  --gin_param train_eval.offline_episode_len=40 \
+  --gin_param train_eval.offline_data_dir=\"<DIR_TO_REPLAY_BUFFER>\"
+
+
+
+

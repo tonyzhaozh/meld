@@ -74,9 +74,9 @@ CUDA_VISIBLE_DEVICES=0 python meld/scripts/run_meld.py \
   --gin_file meld/configs/0_meld_dense.gin \
   --gin_file meld/configs/1_cheetahVel.gin \
   --gin_file meld/configs/2_cheetahVel_1episode.gin
-
-
+ 
 ```
+For commands to reproduce experiments in the paper, please refer to examples.txt
 
 To view training and evaluation information (e.g. learning curves, GIFs of rollouts and predictions), run
 ```bash
