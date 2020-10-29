@@ -3,7 +3,7 @@ Paper: https://arxiv.org/abs/2010.13957
 
 Project Website: https://sites.google.com/view/meld-lsm
 
-by Tony Z. Zhao*, Anusha Nagabandi*, Kate Rakelly*, Chelsea Finn, and Sergey Levine (UC Berkeley)
+by Tony Z. Zhao*, Anusha Nagabandi*, Kate Rakelly*, Chelsea Finn, and Sergey Levine (UC Berkeley, Stanford)
 
 > Meta-reinforcement learning algorithms can enable autonomous agents, such as robots, to quickly acquire new behaviors by leveraging a set of related training tasks to learn a new skill from a small amount of experience.
 However, meta-RL has proven challenging to apply to robots in the real world, largely due to onerous data requirements during meta-training compounded with the challenge of learning from high-dimensional sensory inputs such as images.
