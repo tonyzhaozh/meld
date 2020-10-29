@@ -1,7 +1,7 @@
 
 ModelDistributionNetwork.elbo_reward_weight=10
-ModelDistributionNetwork.latent1_size=64
-ModelDistributionNetwork.latent2_size=32
+ModelDistributionNetwork.latent1_size=128
+ModelDistributionNetwork.latent2_size=64
 ModelDistributionNetwork.reward_stddev=0.2
 ModelDistributionNetwork.base_depth=64
 
