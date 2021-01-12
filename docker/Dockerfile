@@ -167,6 +167,6 @@ ENV PATH /opt/conda/envs/meld/bin:$PATH
 ENV PYTHONPATH=".:$PYTHONPATH"
 
 # manually install custom tf-agents
-ADD ../agents-0.3.0 /root/agents-0.3.0
-RUN pip install -e /root/agents-0.3.0
+ADD agents /root/agents
+RUN pip install -e /root/agents
 

@@ -55,7 +55,7 @@ export LD_PRELOAD=''
 ```
 
 #### Docker
-- Follow the directions above to clone the agents repo but no need to pip install it
+- Follow the directions above to clone this repo and the `agents `repo but no need to pip install it. Move the `agents` repo into `<path_to_meld>/docker`
 - Place your `mjkey.txt` into `<path_to_meld>/docker`
 - From `<path_to_meld>/docker` directory, run this command to build the Docker image from the Dockerfile:
 ```docker build . -t meld```
