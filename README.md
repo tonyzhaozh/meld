@@ -66,6 +66,8 @@ From here you can run any experiment using the commands listed below.
 
 ### Examples usage
 
+Notice: even though all training will be done in a single GPU, Mujoco requires two available GPUs for rendering the train and eval env. It will segfault if only one GPU is installed in the machine.
+
 ```bash
 
 CUDA_VISIBLE_DEVICES=0 python meld/scripts/run_meld.py \
